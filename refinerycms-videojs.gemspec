@@ -1,12 +1,8 @@
 # Encoding: UTF-8
-$:.push File.expand_path('../lib', __FILE__)
-
-puts "="*100
-puts File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
-  s.name              = %q{refinerycms-videos}
+  s.name              = %q{refinerycms-videojs}
   s.version           = %q{0.5.2}
   s.summary           = %q{Videos extension for Refinery CMS}
   s.description       = %q{Manage video in RefineryCMS}
