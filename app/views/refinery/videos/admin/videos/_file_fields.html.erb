@@ -1,0 +1,94 @@
+<label><%= t('.files') %></label>
+<div class='tips'><%= t('.file_tip') %></div>
+<div id='file_fields'>
+  <%= f.fields_for :video_files do |v| %>
+      <div class="parent">
+        <label class="inline">
+          <%= v.radio_button :use_external, false, {:class => "use_file"}.merge(v.object.use_external ? {} : {:checked => true}) %>
+          <span><%= t('.use_file') %></span>
+        </label>
+        <label class="inline">
+          <%= v.radio_button :use_external, true, {:class => "use_external"}.merge(v.object.use_external ? {:checked => true} : {}) %>
+          <span><%= t('.use_external_source') %></span>
+        </label>
+
+        <div class='field'>
+          <div class="use_file" <%= "style='display: none;'" if v.object.use_external %>>
+            <% if v.object.file.present? %>
+                <% if v.object.url %>
+                    <%= link_to(t('.download_current'), v.object.url,
+                                :title => v.object.file_name) %>
+                    <em><%= t('.or') %> </em><%= t('.replace') %>
+                <% else %>
+                    <span><%= t('.add_file') %></span>
+                <% end %>
+                <%= v.file_field :file %>
+            <% else %>
+                <span><%= t('.add_file') %></span>
+                <%= v.file_field :file, {}.merge(v.object.use_external ? {} : {:required => true}) %>
+            <% end %>
+          </div>
+          <div class="use_external" <%= "style='display: none;'" unless v.object.use_external %>>
+            <span><%= t('.link_to_source') %></span>
+            <%= v.text_field :external_url, {}.merge(v.object.use_external ? {:required => true} : {}) %>
+          </div>
+        </div>
+        <div class='add_remove_buttons'>
+          <% if f.object.video_files.count > 1 %>
+              <% if f.object.persisted? %>
+                  <%= link_to(refinery.videos_admin_video_file_path(v.object),
+                              :class => "cancel confirm-delete",
+                              :title => t('.delete'),
+                              :confirm => t('message', :scope => 'refinery.admin.delete', :title => 'file'),
+                              :method => :delete) do %>
+                      <%= refinery_icon_tag("delete.png") %>
+                      <div class="inline"><%= t('.delete_source') %></div>
+                  <% end %>
+              <% else %>
+                  <a href='#' onclick="remove_field($(this)); return false" class="remove_field" style='display: none'><%= refinery_icon_tag("delete.png")%>
+                    <div class="inline"><%= t('.delete_source') %></div>
+                  </a>
+              <% end %>
+          <% end  %>
+          <a href='#' onclick="add_field($(this)); return false" class="add_field" style='display: none'><%= refinery_icon_tag("add.png") %>
+            <div class="inline"><%= t('.add_source') %></div>
+          </a>
+        </div>
+      </div>
+
+  <% end %>
+</div>
+
+<% @video.video_files.build %>
+<%= render 'new_file_field', :f => f %>
+
+<div class='field' id='maximum_file_size'>
+  <label>
+    <%= t('.maximum_file_size', :bytes => number_to_human_size(Refinery::Videos.max_file_size)) %>
+  </label>
+</div>
+
+<script type="text/javascript">
+    function radio_control(){
+        $('input.use_external').on('change', function(){
+            if ($(this).is(':checked')) {
+                var $parent = $(this).parents('div.parent');
+                $parent.find('div.use_external').show();
+                $parent.find('div.use_file').hide();
+                $parent.find('.use_file input').removeAttr('required');
+                $parent.find('.use_external input').attr('required', 'required');
+            }
+        });
+        $('input.use_file').on('change', function(){
+            if ($(this).is(':checked')) {
+                var $parent = $(this).parents('div.parent');
+                $parent.find('div.use_external').hide();
+                $parent.find('div.use_file').show();
+                $parent.find('.use_file input').attr('required', 'required');
+                $parent.find('.use_external input').removeAttr('required');
+            }
+        });
+    }
+
+
+</script>

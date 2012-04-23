@@ -1,0 +1,3 @@
+<%= link_to t('.use_files'), refinery.new_videos_admin_video_path, :class => 'select_video_type' << (@embedded ? '' : ' selected') %>
+<%= link_to t('.use_embedded_video'), refinery.new_videos_admin_video_path(:embedded => true), :class => 'select_video_type' << (@embedded ? ' selected' : '') %>
+<%= render 'form' %>

@@ -1,0 +1,76 @@
+en:
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: Add New Video
+    plugins:
+      videos:
+        title: Videos
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Add New Video
+            reorder: Reorder Videos
+            reorder_done: Done Reordering Videos
+          records:
+            title: Videos
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Videos yet. Click "Add New Video" to add your first video.
+          video:
+            view_live_html: View this video live <br/><em>(opens in a new window)</em>
+            edit: Edit this video
+            delete: Remove this video forever
+            file: File
+            link: Link
+            shared_source: Embedded
+          new:
+            use_files: Use files
+            use_embedded_video: Use embedded video
+          form:
+            title: Title
+            poster: Poster
+            width: Width
+            height: Height
+          file_fields:
+            files: Files
+            file_tip: Add files (or links to files) of 'mp4', 'webm', 'flv', 'ogg' types for full browser compability
+            use_file: Use file
+            use_external_source: Use external source
+            add_file: Add file
+            add_source: Add source
+            delete_source: Delete source
+            link_to_source: Link to source
+            download_current: Use current video
+            or: or
+            replace: replace with this one
+            maximum_file_size: "Maximum file size: %{bytes}"
+          new_file_field:
+            use_file: Use file
+            use_external_source: Use external source
+            add_file: Add file
+            add_source: Add source
+            delete_source: Delete source
+          embed_video_fields:
+            copy_embed_tag_here: Copy HTML here
+          form_option_fields:
+            options: Options
+            autoplay: Autoplay
+            show_ontrols: Show controls
+            preload_video: Preload video
+            loop_video: Loop video
+          insert:
+            insert: Insert
+          preview_form:
+            width: Width
+            height: Height
+      videos:
+        show:
+          other: Other Videos
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: File Name
+        file_size: File Size
+        file_ext: File Ext

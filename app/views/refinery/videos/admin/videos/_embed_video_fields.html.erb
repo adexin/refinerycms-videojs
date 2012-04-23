@@ -1,0 +1,45 @@
+<div class='field'>
+  <%= f.label t('.copy_embed_tag_here') %>
+  <%= f.text_area :embed_tag, :class => 'embed_tag', :required => true %>
+</div>
+<%= f.hidden_field :use_shared, :value => true %>
+
+<script type="text/javascript">
+    $(function(){
+        $('textarea.embed_tag').on('input', function(e){
+            set_width_and_height($(this))
+        });
+        $('#video_width').on('input', function(){
+            set_in_text_area_width('width', $(this));
+        });
+        $('#video_height').on('input', function(){
+            set_in_text_area_width('height', $(this));
+        });
+
+
+    });
+
+    function set_width_and_height(text_area){
+        var val = text_area.val();
+        var width = val.match(/width="(\d+)"/);
+        if (width) {
+            $('#video_width').val(width[1]);
+        }
+        var height = val.match(/height="(\d+)"/);
+        if (height){
+            $('#video_height').val(height[1]);
+        }
+    }
+
+    function set_in_text_area_width(what, input){
+        var val = input.val();
+        var text = $('textarea.embed_tag').val();
+        var new_text = ''
+        if (what == 'width'){
+            new_text = text.replace(/width="(\d*|\0)"/, 'width="' + val + '"');
+        } else if (what == 'height') {
+            new_text = text.replace(/height="(\d*|\0)"/, 'height="' + val + '"');
+        }
+        $('textarea.embed_tag').val(new_text);
+    }
+</script>

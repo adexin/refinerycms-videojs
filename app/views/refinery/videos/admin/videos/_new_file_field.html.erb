@@ -1,0 +1,75 @@
+<%= f.fields_for :video_files, @video.video_files.last do |v| %>
+    <div class="new_field" style="display: none">
+      <label class="inline">
+        <%= v.radio_button :use_external, false, :class => "use_file", :checked => true %>
+        <span><%= t('.use_file') %></span>
+      </label>
+      <label class="inline">
+        <%= v.radio_button :use_external, true, :class => "use_external" %>
+        <span><%= t('.use_external_source') %></span>
+      </label>
+      <div class='field'>
+        <div class="use_file">
+          <span><%= t('.add_file') %></span>
+          <%= v.file_field :file, :id => "new_file_field", :required => true %>
+        </div>
+        <div class="use_external" style='display: none'>
+          <span><%= t('.link_to_source') %></span>
+          <%= v.text_field :external_url, :id => "new_external_url_field" %>
+        </div>
+      </div>
+      <div class='add_remove_buttons'>
+        <a href='#' onclick="remove_field($(this)); return false" class="remove_field"><%= refinery_icon_tag("delete.png")%>
+          <div class="inline"><%= t('.delete_source') %></div>
+        </a>
+        <a href='#' onclick="add_field($(this)); return false" class="add_field"><%= refinery_icon_tag("add.png") %>
+          <div class="inline"><%= t('.add_source') %></div>
+        </a>
+      </div>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+    function add_field(plus){
+        plus.parents('div.parent').find('a.add_field').hide();
+        plus.parents('div.parent').find('a.remove_field').show();
+        prepare_new_field();
+        $div = window.new_field.clone();
+        $div.addClass('parent');
+        $div.removeClass('new_field');
+        $('#file_fields').append($div.show());
+        radio_control();
+    }
+
+    function remove_field(minus){
+        minus.parents('div.parent').remove();
+        $('div.parent').last().find('a.add_field').show();
+        if ($('div.parent').length > 1) {
+            $('div.parent').last().find('a.remove_field').show();
+        } else {
+            $('div.parent').find('a.remove_field').hide();
+        }
+    }
+
+    $(function(){
+        radio_control();
+        $('div.parent').last().find('a.add_field').show();
+        $without_first = $('div.parent').not($('div.parent').first());
+        if ($('div.parent').length > 1) {
+            $('div.parent').find('a.remove_field').show();
+        }
+        window.new_field = $('div.new_field').remove();
+        $('input[checked="checked"]').attr('checked', 'checked');
+    });
+
+    function prepare_new_field(){
+        var $inputs = window.new_field.find('input');
+        var date = Number(new Date);
+        $.each($inputs, function(){
+            var new_name = $(this).attr('name').replace(/\[\d+\]/,'['+date+']');
+            $(this).attr('name', new_name);
+            var new_id = $(this).attr('id') + date
+            $(this).attr('id', new_id);
+        });
+    }
+</script>

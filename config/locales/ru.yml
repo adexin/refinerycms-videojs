@@ -1,0 +1,77 @@
+ru:
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: Добавить видео
+    plugins:
+      videos:
+        title: Видео
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Добавить видео
+            reorder: Изменить порядок
+            reorder_done: Закончить редактирование
+          records:
+            title: Видео
+            sorry_no_results: Извините, ничего не найдено.
+            no_items_yet: Видео отсутствуют. Нажмине "Добавить видео"
+          video:
+            view_live_html: Предварительный просмотр <br/><em>(открывается в новом окне)</em>
+            edit: Редактировать видео
+            delete: Удалить видео
+            file: Файл
+            link: Ссылка
+            shared_source: Встроенное
+          new:
+            use_files: Использовать файлы
+            use_embedded_video: Ислользовать встроенное видео
+          form:
+            title: Название
+            poster: Постер
+            width: Ширина
+            height: Высота
+          file_fields:
+            files: Файлы
+            file_tip: "Для полной совместимости, добавтье файлы (или ссылки на файлы) следующих форматов: 'mp4', 'webm', 'flv', 'ogg'"
+            use_file: Использовать файл
+            use_external_source: Использовать ссылку
+            add_file: Добавить файл
+            add_source: Добавить источник
+            delete_source: Удалить источник
+            link_to_source: Ссылка на источник
+            download_current: Использовать текущее видео
+            or: или
+            replace: загрузить новое
+            maximum_file_size: "Максимальный размер файла: %{bytes}"
+          new_file_field:
+             use_file: Использовать файл
+             use_external_source: Использовать ссылку
+             add_file: Добавить файл
+             add_source: Добавить источник
+             delete_source: Удалить источник
+          embed_video_fields:
+            copy_embed_tag_here: Скопируйте HMTL код
+          form_option_fields:
+            options: Настройки
+            autoplay: Автоматическое воспроизведение
+            show_ontrols: Панель управления
+            preload_video: Загружать автоматически
+            loop_video: Повтор
+          insert:
+            insert: Вставить
+          preview_form:
+            width: Ширина
+            height: Высота
+
+      videos:
+        show:
+          other: Другие видео
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: Имя файла
+        file_size: Размер файла
+        file_ext: Расширение файла

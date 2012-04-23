@@ -1,0 +1,22 @@
+Refinery::Videos.configure do |config|
+    #Configures the maximum allowed upload size (in bytes) for an video file
+    #config.max_file_size = <%= Refinery::Videos.max_file_size %>
+
+    # Configure how many videos per page should be displayed in the list of images in the admin area
+    #config.pages_per_admin_index =  <%= Refinery::Videos.pages_per_admin_index %>
+    #config.pages_per_dialog = <%= Refinery::Videos.pages_per_dialog %>
+
+    # Configure white-listed mime types for validation
+    #config.whitelisted_mime_types = <%= Refinery::Videos.whitelisted_mime_types %>
+
+
+    # Configure Dragonfly
+    # This is where in the middleware stack to insert the Dragonfly middleware
+    # config.dragonfly_insert_before = <%= Refinery::Videos.dragonfly_insert_before %>
+    # config.dragonfly_secret = <%= Refinery::Videos.dragonfly_secret %>
+    # If you decide to trust file extensions replace :ext below with :format
+    # config.dragonfly_url_format = <%= Refinery::Videos.dragonfly_url_format %>
+    # config.datastore_root_path = <%= Refinery::Videos.datastore_root_path %>
+    # config.trust_file_extensions = <%= Refinery::Videos.trust_file_extensions %>
+
+end

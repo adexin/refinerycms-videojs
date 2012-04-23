@@ -1,0 +1,44 @@
+<% @embedded = true if @video.use_shared  %>
+<%= form_for [refinery, :videos_admin, @video] do |f| %>
+    <%= hidden_field_tag(:embedded, true) if @embedded %>
+    <%= render '/refinery/admin/error_messages',
+               :object              => @video,
+               :include_object_name => true %>
+
+    <div class='field'>
+      <%= f.label t('.title') %>
+      <%= f.text_field :title, :required => true  %>
+    </div>
+
+    <% if @embedded %>
+        <%= render 'embed_video_fields', :f => f %>
+    <% else %>
+        <div class='field'>
+          <%= f.label t('.poster') %>
+          <%= render '/refinery/admin/image_picker',
+                     :f => f,
+                     :field => :poster_id,
+                     :image => @video.poster,
+                     :toggle_image_display => false %>
+
+        </div>
+        <%= render 'file_fields', :f => f %>
+    <% end %>
+
+    <div class='field'>
+      <%= f.label t('.width') %>
+      <%= f.text_field :width %>
+    </div>
+    <div class='field'>
+      <%= f.label t('.height') %>
+      <%= f.text_field :height %>
+    </div>
+
+    <%= render('form_option_fields', :f => f) unless @embedded %>
+
+    <%= render '/refinery/admin/form_actions',
+               :f                   => f,
+               :continue_editing    => false,
+               :delete_title        => t('delete', :scope => 'refinery.videos.admin.videos.video'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @video.title) %>
+<% end %>

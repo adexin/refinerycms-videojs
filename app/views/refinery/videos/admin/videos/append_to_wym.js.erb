@@ -1,0 +1,4 @@
+wym = parent.$.wymeditors(0);
+wym.html(wym.html() + '<%= escape_javascript(@html_for_wym) %>');
+wym.update();
+close_dialog();

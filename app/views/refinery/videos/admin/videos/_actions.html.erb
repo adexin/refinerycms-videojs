@@ -1,0 +1,23 @@
+<ul>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.videos_admin_videos_path %>
+    </li>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_videos_admin_video_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Videos::Admin::VideosController.sortable? && ::Refinery::Videos::Video.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Videos"),
+                 refinery.videos_admin_videos_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Videos"),
+                 refinery.videos_admin_videos_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
