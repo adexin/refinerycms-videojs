@@ -3,6 +3,7 @@ module Refinery
     source_root File.expand_path('../videos/templates', __FILE__)
 
     def rake_db
+      puts "="*100
       rake("refinery_videos:install:migrations")
     end
 
