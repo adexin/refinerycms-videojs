@@ -1,5 +1,5 @@
 module Refinery
-  class VideosGenerator < Rails::Generators::Base
+  class VideojsGenerator < Rails::Generators::Base
     source_root File.expand_path('../videos/templates', __FILE__)
 
     def rake_db
