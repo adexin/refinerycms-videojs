@@ -16,9 +16,7 @@ Gem::Specification.new do |s|
   s.authors           = ['Anton Mishchuk']
   s.license           = %q{MIT}
   s.require_paths     = %w(lib)
-  
-  s.files             = `git ls-files`.split("\n")
-  s.test_files        = `git ls-files -- spec/*`.split("\n")
+  s.files             = Dir["{app,config,db,lib}/**/*"]
 
   s.add_dependency 'dragonfly'
   s.add_dependency 'rack-cache'
