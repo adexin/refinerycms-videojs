@@ -1,9 +1,4 @@
 # Encoding: UTF-8
-$:.push File.expand_path('../../core/lib', __FILE__)
-require 'refinery/version'
-
-version = Refinery::Version.to_s
-
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = %q{refinerycms-videojs}
@@ -22,5 +17,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'dragonfly'
   s.add_dependency 'rack-cache'
-  s.add_dependency 'refinerycms-core', version
+  s.add_dependency 'refinerycms-core'
 end
