@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-videojs}
   s.version           = %q{0.5.2}
   s.summary           = %q{Videos extension for Refinery CMS}
-  s.description       = %q{Manage video in RefineryCMS}
+  s.description       = %q{Manage videos in RefineryCMS. Use HTML5 Video.js player.}
   s.email             = %q{amishchuk@adexin.com}
   s.homepage          = %q{http://www.adexin.com}
   s.rubyforge_project = %q{refinerycms-videojs}
