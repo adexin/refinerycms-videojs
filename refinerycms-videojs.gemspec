@@ -1,4 +1,7 @@
 # Encoding: UTF-8
+$:.push File.expand_path('../lib', __FILE__)
+
+
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = %q{refinerycms-videojs}
