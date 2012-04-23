@@ -4,7 +4,7 @@ require 'rack/cache'
 
 
 module Refinery
-  autoload :VideosGenerator, 'generators/refinery/videojs_generator'
+  autoload :VideojsGenerator, 'generators/refinery/videojs_generator'
 
   module Videos
     require 'refinery/videos/engine'
