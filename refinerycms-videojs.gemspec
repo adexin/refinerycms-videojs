@@ -1,6 +1,8 @@
 # Encoding: UTF-8
 $:.push File.expand_path('../lib', __FILE__)
 
+puts "="*100
+puts File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
