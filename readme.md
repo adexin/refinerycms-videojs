@@ -27,7 +27,7 @@ gem 'refinerycms-videojs'
 
 Now, run ``bundle install``
 
-Next, to install the blog plugin run:
+Next, to install the video extension run:
 
     rails generate refinery:videos
 
