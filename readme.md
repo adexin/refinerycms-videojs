@@ -1,5 +1,5 @@
 #Refinery CMS Video.js
-Simple video engine for [Refinery CMS](http://refinerycms.com].
+Simple video engine for [Refinery CMS](http://refinerycms.com).
 There are ways to include video in your project.
 - You can embedded video (like youtube or vimeo iframes)
 - You can upload files
