@@ -16,7 +16,8 @@ Instance method #to_html return html video tag like:
   \<img class="vjs-poster" src="http://video-js.zencoder.com/oceans-clip.jpg">
 \</video>
 
-This content can be added to page in WYMeditor or everywhere in your view like:\n
+This content can be added to page in WYMeditor or everywhere in your view like:
+
 \<div class='video'>\n
 \<%= @my_video.to_html %>\n
 \</div>
