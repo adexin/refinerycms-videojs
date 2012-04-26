@@ -7,6 +7,7 @@ There are three ways to include video in your project.
 - You can embedded video (like youtube or vimeo iframes)
 - You can upload files
 - You can use link to external source
+
 Video (instance of ::Refinery::Videos::Video model) aggregates different sources (files and links).
 
 Instance method #to_html return html video tag like:
