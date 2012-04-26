@@ -17,9 +17,9 @@ Instance method #to_html return html video tag like:
 \</video>
 
 This content can be added to page in WYMeditor or everywhere in your view like:
-<div class='video'>
-<%= @my_video.to_html %>
-</div>
+\<div class='video'>
+\<%= @my_video.to_html %>
+\</div>
 
 Engine use [Video.js](http:videojs.com) player to playback video (except embedded video, of course).
 Engine allows you to manage playback configuration (poster image, width, height, autoplay, controls, etc).
