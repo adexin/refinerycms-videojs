@@ -8,9 +8,9 @@ There are three ways to include video in your project.
 - You can upload files
 - You can use link to external source
 
-Video (instance of ::Refinery::Videos::Video model) aggregates different sources (files and links).
+Video (instance of ::Refinery::Videos::Video model) aggregates different sources (files and links, one or many).
 
-Instance method #to_html return html video tag like:
+Instance method Video#to_html return html video tag like:
 
 `<video id="my_video_1" class="video-js vjs-default-skin" controls
   preload="auto" width="640" height="264"`  
