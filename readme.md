@@ -8,9 +8,10 @@ There are three ways to include video in your project.
 Video (instance of ::Refinery::Videos::Video model) aggregates different sources (files and links).
 Instance method #to_html return html video tag like:
 
-\<video id="my_video_1" class="video-js vjs-default-skin" controls
+`<video id="my_video_1" class="video-js vjs-default-skin" controls
   preload="auto" width="640" height="264" poster="my_video_poster.png"
-  data-setup="{}">
+  data-setup="{}">`
+  
   \<source src="oceans-clip.mp4" type='video/mp4'>
   
   \<source src=""http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
