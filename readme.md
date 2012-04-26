@@ -9,16 +9,15 @@ Video (instance of ::Refinery::Videos::Video model) aggregates different sources
 Instance method #to_html return html video tag like:
 
 `<video id="my_video_1" class="video-js vjs-default-skin" controls
-  preload="auto" width="640" height="264"
-  
-  poster="my_video_poster.png"
+  preload="auto" width="640" height="264"`  
+  `poster="my_video_poster.png"
   data-setup="{}">`
   
-  \<source src="oceans-clip.mp4" type='video/mp4'>
+  `<source src="oceans-clip.mp4" type='video/mp4'>`
   
-  \<source src=""http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
+  `<source src=""http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>`
   
-\</video>
+`</video>`
 
 This content can be added to page in WYMeditor or everywhere in your view like:
 
