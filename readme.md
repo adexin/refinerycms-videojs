@@ -1,11 +1,14 @@
 #Refinery CMS Video.js
 Simple video engine for [Refinery CMS](http://refinerycms.com).
-It add Videos tab to admin menu and insert video link to WYMeditor.
+It add Videos tab to admin menu where you can manage videos.
+And insert 'add video' link to WYMeditor.
+
 There are three ways to include video in your project.
 - You can embedded video (like youtube or vimeo iframes)
 - You can upload files
 - You can use link to external source
 Video (instance of ::Refinery::Videos::Video model) aggregates different sources (files and links).
+
 Instance method #to_html return html video tag like:
 
 `<video id="my_video_1" class="video-js vjs-default-skin" controls
