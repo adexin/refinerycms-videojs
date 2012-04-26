@@ -11,15 +11,21 @@ Instance method #to_html return html video tag like:
 \<video id="my_video_1" class="video-js vjs-default-skin" controls
   preload="auto" width="640" height="264" poster="my_video_poster.png"
   data-setup="{}">
-  \<source src="my_video.mp4" type='video/mp4'>
-  \<source src="my_video.webm" type='video/webm'>
+  
+  \<source src="oceans-clip.mp4" type='video/mp4'>
+  
+  \<source src=""http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
+  
   \<img class="vjs-poster" src="http://video-js.zencoder.com/oceans-clip.jpg">
+  
 \</video>
 
 This content can be added to page in WYMeditor or everywhere in your view like:
 
-\<div class='video'>\n
-\<%= @my_video.to_html %>\n
+\<div class='video'>
+
+\<%= @my_video.to_html %>
+
 \</div>
 
 Engine use [Video.js](http:videojs.com) player to playback video (except embedded video, of course).
