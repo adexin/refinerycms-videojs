@@ -1,7 +1,7 @@
 #Refinery CMS Video.js
 Simple video engine for [Refinery CMS](http://refinerycms.com).
-It add Videos tab to admin menu where you can manage videos.
-And insert 'add video' link to WYMeditor.
+It adds 'Videos' tab to admin menu where you can manage videos.
+And adds 'add video' link to WYMeditor on 'Pages'.
 
 There are three ways to include video in your project.
 - You can embedded video (like youtube or vimeo iframes)
