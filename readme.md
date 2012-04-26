@@ -12,20 +12,15 @@ Instance method #to_html return html video tag like:
   preload="auto" width="640" height="264"`  
   `poster="my_video_poster.png"
   data-setup="{}">`
-  
   `<source src="oceans-clip.mp4" type='video/mp4'>`
-  
   `<source src=""http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>`
-  
 `</video>`
 
 This content can be added to page in WYMeditor or everywhere in your view like:
 
-\<div class='video'>
-
-\<%= @my_video.to_html %>
-
-\</div>
+`<div class='video'>`
+`<%= @my_video.to_html %>`
+`</div>`
 
 Engine use [Video.js](http:videojs.com) player to playback video (except embedded video, of course).
 Engine allows you to manage playback configuration (poster image, width, height, autoplay, controls, etc).
