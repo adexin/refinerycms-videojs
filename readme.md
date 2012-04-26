@@ -8,13 +8,13 @@ There are three ways to include video in your project.
 Video (instance of ::Refinery::Videos::Video model) aggregates different sources (files and links).
 Instance method #to_html return html video tag like:
 
-<video id="my_video_1" class="video-js vjs-default-skin" controls
+'<video id="my_video_1" class="video-js vjs-default-skin" controls
   preload="auto" width="640" height="264" poster="my_video_poster.png"
   data-setup="{}">
   <source src="my_video.mp4" type='video/mp4'>
   <source src="my_video.webm" type='video/webm'>
   <img class="vjs-poster" src="http://video-js.zencoder.com/oceans-clip.jpg">
-</video>
+</video>'
 
 This content can be added to page in WYMeditor or everywhere in your view like:
 <div class='video'>
