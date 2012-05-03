@@ -59,7 +59,8 @@ Run database migrations:
 And you're done.
 
 ##Developing and Contribution
-- Please see [refinerycms-videojs-demo](https://github.com/antonmi/refinerycms-videojs-demo) repo
+- See [refinerycms-videojs-demo](https://github.com/antonmi/refinerycms-videojs-demo) repo
+- Please, give us feedback.
 
 ##More Information
 - Check out Refinery CMS [guides](http://refinerycms.com/guides)
