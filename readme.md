@@ -60,7 +60,7 @@ And you're done.
 
 ##Developing and Contribution
 - See [refinerycms-videojs-demo](https://github.com/antonmi/refinerycms-videojs-demo) repo
-- Please, give us feedback.
+- Please, give us feedback
 
 ##More Information
 - Check out Refinery CMS [guides](http://refinerycms.com/guides)
