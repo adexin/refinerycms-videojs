@@ -18,7 +18,7 @@ The instance method `Video#to_html` renders an html video tag like:
   poster="my_video_poster.png"
   data-setup="{}">
   <source src="oceans-clip.mp4" type='video/mp4'>
-  <source src=""http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
+  <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
 </video>
 ```
 
