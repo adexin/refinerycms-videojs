@@ -1,0 +1,77 @@
+sk:
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: Pridať nové video
+    plugins:
+      videos:
+        title: Videá
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Pridať nové video
+            reorder: Zmeniť usporiadanie videí
+            reorder_done: Uložiť usporiadanie
+          records:
+            title: Videá
+            sorry_no_results: Prepáč! Nenašli sa žiadne záznamy.
+            no_items_yet: Zatiaľ neboli pridané žiadne videá. Klikni na "Pridať nové video" pre pridanie prvého videa.
+          video:
+            view_live_html: Pozrieť toto video live <br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť toto video
+            delete: Permanentne odstrániť toto video
+            file: Súbor
+            link: Odkaz
+            shared_source: Embedovaný
+          new:
+            use_files: Video súbor
+            use_embedded_video: Embed kód
+          form:
+            title: Názov
+            poster: Foto náhľad
+            width: Šírka
+            height: Výška
+          file_fields:
+            files: Súbory
+            file_tip: Pridaj súbory (alebo odkazy na súbory) typu 'mp4', 'webm', 'flv', 'ogg' pre plnú kompatibilitu prehliadačov
+            use_file: Súbor
+            use_external_source: Externý súbor
+            add_file: Pridať súbor
+            add_source: Pridať zdroj
+            delete_source: Odstrániť zdroj
+            link_to_source: Odkaz na zdroj
+            download_current: Použiť aktuálne video
+            or: alebo
+            replace: nahradiť týmto
+            maximum_file_size: "Maximálna veľkosť súboru: %{bytes}"
+          new_file_field:
+            use_file: Súbor
+            use_external_source: Externý súbor
+            add_file: Pridať súbor
+            add_source: Pridať zdroj
+            delete_source: Odstrániť zdroj
+          embed_video_fields:
+            copy_embed_tag_here: Tu vlož embed kód
+          form_option_fields:
+            options: Možnosti
+            autoplay: Automatické spustenie prehrávania
+            show_ontrols: Zobraziť ovládanie
+            preload_video: Prednačítavanie videa
+            loop_video: Prehrávať video v slučke
+          insert:
+            insert: Vložiť
+          preview_form:
+            width: Šírka
+            height: Výška
+      videos:
+        show:
+          other: Ďalšie videá
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: Názov súboru
+        file_size: Veľkosť súboru
+        file_ext: Prípona súboru
+
