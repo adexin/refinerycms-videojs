@@ -64,7 +64,7 @@ module Refinery
             sources << ["<source src='#{file.url}' type='#{file.file_mime_type}'/>"]
           end if file.exist?
         end
-        html = %Q{<video id="video_#{self.id}" class="video-js vjs-default-skin" width="#{config[:width]}" height="#{config[:height]}" data-setup=' {#{data_setup.join(',')}}'>#{sources.join}</video>}
+        html = %Q{<video id="video_#{self.id}" class="video-js #{Refinery::Videos.skin_css_class}" width="#{config[:width]}" height="#{config[:height]}" data-setup=' {#{data_setup.join(',')}}'>#{sources.join}</video>}
 
         html.html_safe
       end
