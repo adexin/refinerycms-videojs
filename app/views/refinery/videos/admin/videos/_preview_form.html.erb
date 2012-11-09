@@ -1,5 +1,5 @@
 <%=  render "videojs_dependencies" unless @embedded%>
-<%= form_for @video, url: refinery.videos_admin_video_append_to_wym_path(@video.id), :remote => true, :method => :post do |f| %>
+<%= form_for @video, :url => refinery.videos_admin_video_append_to_wym_path(@video.id), :remote => true, :method => :post do |f| %>
     <div class='dimensions'>
     <div class='field'>
       <%= f.label t('.width') %>
