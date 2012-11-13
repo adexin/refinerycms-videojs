@@ -1,13 +1,8 @@
-#add_video {
-    padding-top: 3px;
-    padding-left: 10px
-}
-
-#add_video li a{
+.wym_skin_refinery .wym_section li.wym_tools_add_video a{
     height: 20px;
     background-image: url('/assets/refinery/admin/add_video_icon.png');
     background-repeat: no-repeat;
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 label.inline{

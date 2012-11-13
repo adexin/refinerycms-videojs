@@ -1,0 +1,9 @@
+wymeditor_boot_options.toolsItems.push({'name': 'AddVideo', 'title': 'Add_Video', 'css': 'wym_tools_add_video'});
+
+if (WYMeditor.STRINGS['en']) WYMeditor.STRINGS['en']['Add_Video'] = '<%= I18n.t(:add_video, :scope => :wym_tools, :locale => :en) %>';
+if (WYMeditor.STRINGS['es']) WYMeditor.STRINGS['es']['Add_Video'] = '<%= I18n.t(:add_video, :scope => :wym_tools, :locale => :es) %>';
+
+onCloseDialog = function(){
+   $('iframe#dialog_iframe').attr('src', '');
+};
+

@@ -1,0 +1,79 @@
+es:
+  wym_tools:
+    add_video: Video 
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: Añadir nuevo video
+    plugins:
+      videos:
+        title: Videos
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Añadir nuevo video
+            reorder: Reordenar Videos
+            reorder_done: Reordenación de videos completada
+          records:
+            title: Videos
+            sorry_no_results: No se han encontrado resultados.
+            no_items_yet: Aún no hay videos. Haga click en "Añadir Nuevo Video" para insertar el primero.
+          video:
+            view_live_html: Ver este video en directo <br/><em>(se abre en una nueva ventana)</em>
+            edit: Editar este video
+            delete: Eliminar este video para siempre
+            file: Archivo
+            link: Enlace
+            shared_source: Embebido
+          new:
+            use_files: Usar archivos
+            use_embedded_video: Usar video embebido
+          form:
+            title: Título
+            poster: Poster
+            width: Ancho
+            height: Alto
+            page: Seleccionar como video al cargar una página
+          file_fields:
+            files: Archivos
+            file_tip: Añadir archivos (o enlaces a los archivos) tipos 'mp4', 'webm', 'flv', 'ogg' para compatibilidad total con el navegador
+            use_file: Usar archivo
+            use_external_source: Usar archivo externo
+            add_file: Añadir archivo
+            add_source: Añadir fuente
+            delete_source: Borrar fuente
+            link_to_source: Enlace a la fuente
+            download_current: Usar video actual
+            or: o
+            replace: remplazar con este
+            maximum_file_size: "Tamaño máximo de archivo: %{bytes}"
+          new_file_field:
+            use_file: Usar archivo
+            use_external_source: Usar fuente externa
+            add_file: Añadir archivo
+            add_source: Añadir fuente
+            delete_source: Borrar fuente
+          embed_video_fields:
+            copy_embed_tag_here: Copiar HTML aquí
+          form_option_fields:
+            options: Opciones
+            autoplay: Auto-arranque
+            show_ontrols: Mostrar controles
+            preload_video: Precargar video
+            loop_video: Repetir video
+          insert:
+            insert: Insertar
+          preview_form:
+            width: Ancho
+            height: Alto
+      videos:
+        show:
+          other: Otros Videos
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: Nombre de archivo
+        file_size: Tamaño de archivo
+        file_ext: Extensión de archivo
