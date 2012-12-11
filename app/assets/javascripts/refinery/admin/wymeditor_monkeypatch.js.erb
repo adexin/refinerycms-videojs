@@ -7,3 +7,9 @@ onCloseDialog = function(){
    $('iframe#dialog_iframe').attr('src', '');
 };
 
+WYMeditor.editor.prototype.exec_without_video = WYMeditor.editor.prototype.exec;
+WYMeditor.editor.prototype.exec = function(cmd) {
+	if (cmd == 'AddVideo') {
+		this.dialog('Video');
+	} else this.exec_without_video(cmd);
+}
