@@ -1,4 +1,6 @@
 sk:
+  wym_tools:
+    add_video: Video
   refinery:
     admin:
       dashboard:
@@ -74,4 +76,3 @@ sk:
         file_name: Názov súboru
         file_size: Veľkosť súboru
         file_ext: Prípona súboru
-
