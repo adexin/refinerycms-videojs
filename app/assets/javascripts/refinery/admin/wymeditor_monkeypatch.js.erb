@@ -3,7 +3,7 @@ wymeditor_boot_options.toolsItems.push({'name': 'AddVideo', 'title': 'Add_Video'
 
 <% locales = %w(en es sk pt-BR)%>
 <% locales.each do |locale| %>
-  if (WYMeditor.STRINGS['<%=locale%>']) WYMeditor.STRINGS['<%=locale%>']['Add_Video'] = '<%= I18n.t(:add_video, :scope => :wym_tools, :locale => locale) %>';
+  if (WYMeditor.STRINGS['<%=locale%>']) WYMeditor.STRINGS['<%=locale%>']['Video'] = WYMeditor.STRINGS['<%=locale%>']['Add_Video'] = '<%= I18n.t(:add_video, :scope => :wym_tools, :locale => locale) %>';
 <% end %>
 
 onCloseDialog = function(){
