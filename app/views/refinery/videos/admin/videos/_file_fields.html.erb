@@ -13,7 +13,7 @@
         </label>
 
         <div class='field'>
-          <div class="use_file" <%= "style='display: none;'" if v.object.use_external %>>
+          <div class="use_file" <%= raw "style='display: none;'" if v.object.use_external %>>
             <% if v.object.file.present? %>
                 <% if v.object.url %>
                     <%= link_to(t('.download_current'), v.object.url,
@@ -28,7 +28,7 @@
                 <%= v.file_field :file, {}.merge(v.object.use_external ? {} : {:required => true}) %>
             <% end %>
           </div>
-          <div class="use_external" <%= "style='display: none;'" unless v.object.use_external %>>
+          <div class="use_external" <%= raw "style='display: none;'" unless v.object.use_external %>>
             <span><%= t('.link_to_source') %></span>
             <%= v.text_field :external_url, {}.merge(v.object.use_external ? {:required => true} : {}) %>
           </div>
