@@ -50,6 +50,10 @@ Open up your ``Gemfile`` and add at the bottom this line:
 ```ruby
 gem 'refinerycms-videojs'
 ```
+Get the latest version with:
+```ruby
+gem 'refinerycms-videojs', git: 'git@github.com:adexin-team/refinerycms-videojs.git'
+```
 
 Now, run: 
 
