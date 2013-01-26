@@ -1,0 +1,79 @@
+zh-CN:
+  wym_tools:
+    add_video: 添加视频 
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: 添加新视频
+    plugins:
+      videos:
+        title: 视频
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: 添加新视频
+            reorder: 重新编排视频顺序
+            reorder_done: 完成编排
+          records:
+            title: 视频
+            sorry_no_results: 对不起, 没有找到结果
+            no_items_yet: 这里还没有视频. 点击 "添加新视频" 去添加您的第一张视频.
+          video:
+            view_live_html: 查看此视频 <br/><em>新窗口打开</em>
+            edit: 编辑此视频
+            delete: 永久删除此视频
+            file: 文件
+            link: 链接
+            shared_source: 内嵌
+          new:
+            use_files: 上传文件
+            use_embedded_video: 使用内嵌视频
+          form:
+            title: 标题
+            poster: 上传者
+            width: 宽度
+            height: 高度
+          file_fields:
+            files: 文件
+            file_tip: 为了适应浏览器兼容性, 请添加'mp4', 'webm', 'flv', 'ogg'格式的文件 (或文件链接).
+            use_file: 上传文件
+            use_external_source: 使用文件链接
+            add_file: 添加文件
+            add_source: 继续添加视频
+            delete_source: 删除视频
+            link_to_source: 文件链接
+            download_current: 使用当前视频
+            or: 或
+            replace: 替换当前视频
+            maximum_file_size: "最大的视频大小为 %{bytes}"
+          new_file_field:
+            use_file: 上传文件
+            use_external_source: 使用文件链接
+            add_file: 添加文件
+            add_source: 继续添加视频
+            delete_source: 删除视频
+            link_to_source: 文件链接
+          embed_video_fields:
+            copy_embed_tag_here: 拷贝 HTML 代码到这里
+          form_option_fields:
+            options: 选项
+            autoplay: 自动播放
+            show_ontrols: 显示控制器
+            preload_video: 预加载视频
+            loop_video: 循环播放视频
+          insert:
+            insert: 插入
+          preview_form:
+            width: 宽度
+            height: 高度
+      videos:
+        show:
+          other: 其他视频
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: 文件名
+        file_size: 文件大小
+        file_ext: 文件Ext
