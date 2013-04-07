@@ -18,7 +18,7 @@ class CreateVideoFile < ActiveRecord::Migration
 
   def down
 
-    drop_table :refinery_videos
+    drop_table :refinery_video_files
 
   end
 
