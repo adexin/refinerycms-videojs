@@ -36,11 +36,6 @@ This extension:
   * Allows you to insert video to pages using WYMeditor, by inserting an HTML code with video (or iframe) tag.
   * Automatically downloads the video.js library on your website frontend.
 
-# Demo
-You can see the extension in action [here](http://refinerycms-videojs-demo.herokuapp.com/refinery/videos).
-Use demo@adexin.com / demo@adexin.com to login.
-Please, remove your videos after playing around.
-
 ## Requirements
 Refinery CMS version 2.0.1 or above
 
@@ -68,10 +63,6 @@ Run database migrations:
     rake db:migrate
 
 And you're done.
-
-## Developing and Contribution
-- See [refinerycms-videojs-demo](https://github.com/antonmi/refinerycms-videojs-demo) repo
-- Please, give us feedback
 
 ## More Information
 - Check out Refinery CMS [guides](http://refinerycms.com/guides)
