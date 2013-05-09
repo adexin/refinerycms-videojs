@@ -37,7 +37,7 @@ This extension:
   * Automatically downloads the video.js library on your website frontend.
 
 # Demo
-You can see the extension in action [here](http://refinerycms-videojs-demo.herokuapp.com/refinery/videos)
+You can see the extension in action [here](http://refinerycms-videojs-demo.herokuapp.com/refinery/videos).
 Use demo@adexin.com / demo@adexin.com to login.
 Please, remove your videos after playing around.
 
