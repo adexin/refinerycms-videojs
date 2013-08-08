@@ -1,4 +1,5 @@
 # Refinery CMS Video.js
+## Sorry, not supported. See forks.
 Simple video extension for [Refinery CMS](http://refinerycms.com).
 It adds a 'Videos' tab to admin menu where you can manage videos.
 And adds an 'add video' link to WYMeditor on 'Pages'.
