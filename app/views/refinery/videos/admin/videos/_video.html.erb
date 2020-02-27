@@ -8,13 +8,15 @@
   </span>
   <% unless action_name =~ /insert/   %>
   <span class='actions'>
-    <%= link_to refinery_icon_tag('eye.png'), refinery.videos_admin_video_path(video, :dialog => true),
+    <%= link_to '', refinery.videos_admin_video_path(video, :dialog => true),
+                :class => 'preview_icon',
                 :title => t('.view_live_html'),
                 :target => "_blank" %>
-    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_videos_admin_video_path(video),
+    <%= link_to '', refinery.edit_videos_admin_video_path(video),
+                :class => 'edit_icon',
                 :title => t('.edit') %>
-    <%= link_to refinery_icon_tag("delete.png"), refinery.videos_admin_video_path(video),
-                :class => "cancel confirm-delete",
+    <%= link_to '', refinery.videos_admin_video_path(video),
+                :class => "cancel confirm-delete delete_icon",
                 :title => t('.delete'),
                 :confirm => t('message', :scope => 'refinery.admin.delete', :title => video.title),
                 :method => :delete %>

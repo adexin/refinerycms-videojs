@@ -21,7 +21,7 @@ zh-CN:
             sorry_no_results: 对不起, 没有找到结果
             no_items_yet: 这里还没有视频. 点击 "添加新视频" 去添加您的第一张视频.
           video:
-            view_live_html: 查看此视频 <br/><em>新窗口打开</em>
+            view_live_html: 查看此视频
             edit: 编辑此视频
             delete: 永久删除此视频
             file: 文件

@@ -21,7 +21,7 @@ pt-BR:
             sorry_no_results: Nenhum resultado encontrado.
             no_items_yet: Não existem vídeos ainda. Clique em  "Adicionar novo vídeo" para adicionar seu primeiro vídeo.
           video:
-            view_live_html: Veja esse vídeo <br/><em>(abre em uma nova janela)</em>
+            view_live_html: Veja esse vídeo
             edit: Editar esse vídeo
             delete: Remover esse vídeo definitivamente
             file: Arquivo

@@ -37,20 +37,19 @@
           <% if f.object.video_files.count > 1 %>
               <% if f.object.persisted? %>
                   <%= link_to(refinery.videos_admin_video_file_path(v.object),
-                              :class => "cancel confirm-delete",
+                              :class => "cancel confirm-delete fa fa-minus",
                               :title => t('.delete'),
                               :confirm => t('message', :scope => 'refinery.admin.delete', :title => 'file'),
                               :method => :delete) do %>
-                      <%= refinery_icon_tag("delete.png") %>
                       <div class="inline"><%= t('.delete_source') %></div>
                   <% end %>
               <% else %>
-                  <a href='#' onclick="remove_field($(this)); return false" class="remove_field" style='display: none'><%= refinery_icon_tag("delete.png")%>
-                    <div class="inline"><%= t('.delete_source') %></div>
-                  </a>
+                <a href='#' onclick="remove_field($(this)); return false" class="remove_field fa fa-minus" style='display: none'>
+                  <div class="inline"><%= t('.delete_source') %></div>
+                </a>
               <% end %>
           <% end  %>
-          <a href='#' onclick="add_field($(this)); return false" class="add_field" style='display: none'><%= refinery_icon_tag("add.png") %>
+          <a href='#' onclick="add_field($(this)); return false" class="add_field fa fa-plus" style='display: none'>
             <div class="inline"><%= t('.add_source') %></div>
           </a>
         </div>

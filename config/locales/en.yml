@@ -21,7 +21,7 @@ en:
             sorry_no_results: Sorry! There are no results found.
             no_items_yet: There are no Videos yet. Click "Add New Video" to add your first video.
           video:
-            view_live_html: View this video live <br/><em>(opens in a new window)</em>
+            view_live_html: View this video live
             edit: Edit this video
             delete: Remove this video forever
             file: File

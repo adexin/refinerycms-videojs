@@ -1,5 +1,4 @@
 # Refinery CMS Video.js
-## Sorry, not supported. See forks.
 Simple video extension for [Refinery CMS](http://refinerycms.com).
 It adds a 'Videos' tab to admin menu where you can manage videos.
 And adds an 'add video' link to WYMeditor on 'Pages'.
@@ -31,14 +30,14 @@ This content can be added to a page in WYMeditor, or everywhere in your view lik
 </div>
 ```
 
-This extension: 
+This extension:
   * Uses the [Video.js](http:videojs.com) player to playback video (except embedded video, of course).
   * Allows you to manage playback configuration (poster image, width, height, autoplay, controls, etc).
   * Allows you to insert video to pages using WYMeditor, by inserting an HTML code with video (or iframe) tag.
   * Automatically downloads the video.js library on your website frontend.
 
 ## Requirements
-Refinery CMS version 2.0.1 or above
+Refinery CMS version 4.0.2 or above
 
 ## Install
 Open up your ``Gemfile`` and add at the bottom this line:
@@ -48,10 +47,10 @@ gem 'refinerycms-videojs'
 ```
 Get the latest version with:
 ```ruby
-gem 'refinerycms-videojs', git: 'git@github.com:adexin-team/refinerycms-videojs.git'
+gem 'refinerycms-videojs', git: 'git@github.com:adexin/refinerycms-videojs.git'
 ```
 
-Now, run: 
+Now, run:
 
     bundle install
 
@@ -66,5 +65,16 @@ Run database migrations:
 And you're done.
 
 ## More Information
-- Check out Refinery CMS [guides](http://refinerycms.com/guides)
-- Check out our [website](http://adexin.com)
+Check out Refinery CMS [guides](http://refinerycms.com/guides)
+
+## Issues and Bugs
+Let us know if you [found a bug](https://github.com/adexin/refinerycms-videojs/issues)!
+
+## Support and Contact
+Have a quick question or need some help? Please do not hesitate to contact us via email at info@adexin.com.
+
+## Credits
+This component is developed by consulting agency [Adexin](https://adexin.com/).
+
+## License
+Refinery CMS Video.js is released under MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact.

@@ -7,7 +7,7 @@ module Refinery
       describe 'videos' do
 
         before do
-          visit refinery.new_refinery_user_session_path
+          visit refinery.new_authentication_devise_user_session_path
           fill_in "Username", :with => 'admin@admin.com'
           fill_in "Email", :with => 'admin@admin.com'
           fill_in "Password", :with => 'admin@admin.com'

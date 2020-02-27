@@ -6,7 +6,7 @@ module Refinery
 
       engine_name :refinery_videos
 
-      initializer 'attach-refinery-videos-with-dragonfly', :after => :load_config_initializers do |app|
+      initializer 'attach-refinery-videos-with-dragonfly', after: :load_config_initializers do |app|
         ::Refinery::Videos::Dragonfly.configure!
         ::Refinery::Videos::Dragonfly.attach!(app)
       end
@@ -16,16 +16,13 @@ module Refinery
           plugin.name = "videos"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.videos_admin_videos_path }
           plugin.pathname = root
-          plugin.activity = {
-            :class_name => :'refinery/videos/video',
-            :title => 'title'
-          }
-
         end
       end
 
       config.to_prepare do
         require 'refinery/videos/dialogs_controller'
+
+        Rails.application.config.assets.precompile << %w(refinery/admin/wymeditor_monkeypatch.js refinery/admin/video.css)
       end
       config.after_initialize do
         Refinery.register_extension(Refinery::Videos)

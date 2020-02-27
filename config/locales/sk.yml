@@ -21,7 +21,7 @@ sk:
             sorry_no_results: Prepáč! Nenašli sa žiadne záznamy.
             no_items_yet: Zatiaľ neboli pridané žiadne videá. Klikni na "Pridať nové video" pre pridanie prvého videa.
           video:
-            view_live_html: Pozrieť toto video live <br/><em>(otvorí sa v novom okne)</em>
+            view_live_html: Pozrieť toto video live
             edit: Upraviť toto video
             delete: Permanentne odstrániť toto video
             file: Súbor

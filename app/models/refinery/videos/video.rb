@@ -5,27 +5,23 @@ module Refinery
     class Video < Refinery::Core::BaseModel
 
       self.table_name = 'refinery_videos'
-      acts_as_indexed :fields => [:title]
+      acts_as_indexed fields: [:title]
 
-      validates :title, :presence => true
+      validates :title, presence: true
       validate :one_source
 
-      has_many :video_files, :dependent => :destroy
+      has_many :video_files, dependent: :destroy
       accepts_nested_attributes_for :video_files
 
-      belongs_to :poster, :class_name => '::Refinery::Image'
+      belongs_to :poster, class_name: '::Refinery::Image', optional: true
       accepts_nested_attributes_for :poster
 
       ################## Video config options
       serialize :config, Hash
       CONFIG_OPTIONS = {
-          :autoplay => "false", :width => "400", :height => "300",
-          :controls => "true", :preload => "true", :loop => "true"
+        autoplay: "false", width: "400", height: "300",
+        controls: "true", preload: "true", loop: "true"
       }
-
-      attr_accessible :title, :poster_id, :video_files_attributes,
-                      :position, :config, :embed_tag, :use_shared,
-                      *CONFIG_OPTIONS.keys
 
       # Create getters and setters
       CONFIG_OPTIONS.keys.each do |option|
@@ -61,11 +57,10 @@ module Refinery
           if file.use_external
             sources << ["<source src='#{file.external_url}' type='#{file.file_mime_type}'/>"]
           else
-            sources << ["<source src='#{file.url}' type='#{file.file_mime_type}'/>"]
+            sources << ["<source src='#{file.remote_url}' type='#{file.mime_type}'/>"]
           end if file.exist?
         end
         html = %Q{<video id="video_#{self.id}" class="video-js #{Refinery::Videos.skin_css_class}" width="#{config[:width]}" height="#{config[:height]}" data-setup=' {#{data_setup.join(',')}}'>#{sources.join}</video>}
-
         html.html_safe
       end
 

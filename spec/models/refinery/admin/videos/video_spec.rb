@@ -9,7 +9,7 @@ module Refinery
         before { subject.valid? }
 
         it { should be_invalid }
-        its(:errors) { should include(:video_files) }
+        it { expect(subject.errors).to include(:video_files) }
       end
 
       describe 'validate embed_tag presence' do
@@ -17,7 +17,7 @@ module Refinery
         before { subject.valid? }
 
         it { should be_invalid }
-        its(:errors) { should include(:embed_tag) }
+        it { expect(subject.errors).to include(:embed_tag) }
       end
 
       describe 'should be valid' do
@@ -75,7 +75,7 @@ module Refinery
           let(:video_file) { FactoryGirl.build(:video_file) }
           let(:video) { Video.new(:use_shared => false) }
           before do
-            video_file.stub(:url).and_return('url_to_video_file')
+            video_file.stub(:remote_url) { 'url_to_video_file' }
             video.video_files << video_file
           end
           it 'should return video tag with source' do

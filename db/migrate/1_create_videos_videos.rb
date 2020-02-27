@@ -1,4 +1,4 @@
-class CreateVideosVideos < ActiveRecord::Migration
+class CreateVideosVideos < ActiveRecord::Migration[4.2]
 
   def up
     create_table "refinery_videos", :force => true do |t|

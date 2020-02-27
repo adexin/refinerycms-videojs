@@ -2,7 +2,7 @@ parent.$.fn.getIndex = function(){
     var $p=$(this).parent().children();
     return $p.index(this);
 }
-selectedPart = parent.$('#page_parts .ui-tabs-selected').getIndex();
+selectedPart = parent.$('#page_parts .ui-tabs-active').getIndex();
 wym = parent.$.wymeditors(selectedPart);
 selectedBlock = wym.selected();
 if (selectedBlock !== null) {

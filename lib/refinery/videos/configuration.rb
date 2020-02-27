@@ -2,15 +2,15 @@ module Refinery
   module Videos
     include ActiveSupport::Configurable
 
-    config_accessor :dragonfly_insert_before, :dragonfly_secret, :dragonfly_url_format,
+    config_accessor :dragonfly_insert_before, :dragonfly_secret, :dragonfly_server_root,
                     :max_file_size, :pages_per_dialog, :pages_per_admin_index,
                     :s3_backend, :s3_bucket_name, :s3_region,
                     :s3_access_key_id, :s3_secret_access_key,
                     :datastore_root_path, :trust_file_extensions, :whitelisted_mime_types, :skin_css_class
 
     self.dragonfly_insert_before = 'ActionDispatch::Callbacks'
-    self.dragonfly_secret = Refinery::Core.dragonfly_secret
-    self.dragonfly_url_format = '/system/videos/:job/:basename.:format'
+    self.dragonfly_secret = Refinery::Dragonfly.secret
+    self.dragonfly_server_root = 'public'
     self.trust_file_extensions = false
     self.max_file_size = 524288000
     self.pages_per_dialog = 7
@@ -20,11 +20,11 @@ module Refinery
 
     class << self
       def datastore_root_path
-        config.datastore_root_path || (Rails.root.join('public', 'system', 'refinery', 'videos').to_s if Rails.root)
+        config.datastore_root_path || Rails.root.join('public', 'system', 'refinery', 'videos').to_s
       end
 
       def s3_backend
-        config.s3_backend.nil? ? Refinery::Core.s3_backend : config.s3_backend
+        config.s3_backend.nil? ? Refinery::Core.config.s3_backend : config.s3_backend
       end
 
       def s3_bucket_name

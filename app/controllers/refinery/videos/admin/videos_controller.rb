@@ -9,7 +9,7 @@ module Refinery
                 :order => 'position ASC',
                 :sortable => true
 
-        before_filter :set_embedded, :only => [:new, :create]
+        before_action :set_embedded, :only => [:new, :create]
 
         def show
           @video = Video.find(params[:id])
@@ -28,7 +28,7 @@ module Refinery
 
         def append_to_wym
           @video = Video.find(params[:video_id])
-          params['video'].each do |key, value|
+          video_params.each do |key, value|
             @video.config[key.to_sym] = value
           end
           @html_for_wym = @video.to_html
@@ -53,6 +53,14 @@ module Refinery
           @embedded = true if params['embedded']
         end
 
+        def video_params
+          params.require(:video).permit(
+            :title, :poster_id, :position, :config, :embed_tag, :use_shared,
+            *Video::CONFIG_OPTIONS.keys,
+            :video_files_attributes => [
+              :file, :position, :use_external, :external_url
+            ])
+        end
       end
     end
   end

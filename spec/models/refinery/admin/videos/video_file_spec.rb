@@ -31,12 +31,12 @@ module Refinery
       end
 
       it 'should return true when file exist' do
-        @video_file.exist?.should be_true
+        expect(@video_file).to exist
       end
 
       it 'should return false when file does not exist' do
         @video_file.file = nil
-        @video_file.exist?.should be_false
+        expect(@video_file).not_to exist
       end
 
       it 'should determine mime_type from url' do

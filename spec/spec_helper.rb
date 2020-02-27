@@ -1,7 +1,12 @@
+require 'bundler/setup'
+Bundler.setup
+
 require 'simplecov'
 SimpleCov.start 'rails'
 
-
+def refinery
+  Refinery::Core::Engine.routes.url_helpers
+end
 
 def setup_environment
   # Configure Rails Environment
@@ -11,19 +16,27 @@ def setup_environment
 
   require 'rspec/rails'
   require 'capybara/rspec'
+  require 'capybara-screenshot/rspec'
   require 'capybara/rails'
-
+  require 'capybara-webkit'
+  require 'factory_girl_rails'
 
 
   Rails.backtrace_cleaner.remove_silencers!
+  Capybara::Screenshot.prune_strategy = :keep_last_run
+  # Capybara::Webkit.configure do |config|
+  #   config.debug = true
+  # end
 
   RSpec.configure do |config|
-    config.include Devise::TestHelpers, :type => :controller
+    config.include Devise::Test::ControllerHelpers, :type => :controller
+    config.include Capybara::DSL
     config.mock_with :rspec
     config.treat_symbols_as_metadata_keys_with_true_values = true
     config.filter_run :focus => true
     config.run_all_when_everything_filtered = true
   end
+
 end
 
 def each_run
@@ -60,7 +73,7 @@ end
 
 
 
-silence_stream(STDOUT){ load("#{Rails.root.to_s}/db/schema.rb")}
+load("#{Rails.root.to_s}/db/schema.rb")
 
 #Capybara use the same connection
 class ActiveRecord::Base

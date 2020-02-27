@@ -1,6 +1,6 @@
 # MIT License
  
-Copyright (c) 2011-2012 [Adexin](http://www.adexin.com)
+Copyright (c) 2011-2012, 2020 [Adexin](http://www.adexin.com)
  
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

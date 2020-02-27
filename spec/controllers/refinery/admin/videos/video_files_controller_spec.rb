@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Refinery::Videos::Admin::VideoFilesController do
+describe Refinery::Videos::Admin::VideoFilesController, type: :controller do
   render_views
   before do
-    @user = Refinery::User.create!(:username => 'admin@admin.com',
+    @user = Refinery::Authentication::Devise::User.create!(:username => 'admin@admin.com',
                                    :email => 'admin@admin.com',
                                    :password => 'admin@admin.com',
                                    :password_confirmation => 'admin@admin.com')
@@ -20,7 +20,7 @@ describe Refinery::Videos::Admin::VideoFilesController do
     end
 
     it 'should delete video_file' do
-      post :destroy, :id => @video_file.id
+      post :destroy, params: { id: @video_file.id }
       response.status.should redirect_to(refinery.edit_videos_admin_video_path(@video))
       ::Refinery::Videos::VideoFile.count.should == 0
     end

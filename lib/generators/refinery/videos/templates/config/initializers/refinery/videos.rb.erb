@@ -7,17 +7,15 @@ Refinery::Videos.configure do |config|
 
     # Configure white-listed mime types for validation
     #config.whitelisted_mime_types = <%= Refinery::Videos.whitelisted_mime_types %>
-	
+
     # Configure skin. Put css class name to activate skin. For YouTube like skin put tubecss and add css with images to assets path.
     # config.skin_css_class = <%= Refinery::Videos.skin_css_class %>
 
     # Configure Dragonfly
     # This is where in the middleware stack to insert the Dragonfly middleware
     # config.dragonfly_insert_before = <%= Refinery::Videos.dragonfly_insert_before %>
-    # config.dragonfly_secret = <%= Refinery::Videos.dragonfly_secret %>
     # If you decide to trust file extensions replace :ext below with :format
-    # config.dragonfly_url_format = <%= Refinery::Videos.dragonfly_url_format %>
+    # config.dragonfly_server_root = <%= Refinery::Videos.dragonfly_server_root %>
     # config.datastore_root_path = <%= Refinery::Videos.datastore_root_path %>
     # config.trust_file_extensions = <%= Refinery::Videos.trust_file_extensions %>
-
 end

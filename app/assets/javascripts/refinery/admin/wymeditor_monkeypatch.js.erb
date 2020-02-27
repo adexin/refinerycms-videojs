@@ -16,3 +16,12 @@ WYMeditor.editor.prototype.exec = function(cmd) {
 		this.dialog('Video');
 	} else this.exec_without_video(cmd);
 }
+
+<% Refinery::Wymeditor.whitelist_tags.each do |tag, attrs| %>
+  WYMeditor.XhtmlValidator._tags['<%=tag%>'] = WYMeditor.XhtmlValidator._tags['<%=tag%>'] || {};
+  <% attrs['attributes'].values.each do |attr| %>
+  WYMeditor.XhtmlValidator._tags['<%=tag%>'].attributes = WYMeditor.XhtmlValidator._tags['<%=tag%>'].attributes || {};
+    WYMeditor.XhtmlValidator._tags['<%=tag%>'].attributes[Object.keys(WYMeditor.XhtmlValidator._tags['<%=tag%>'].attributes).length + 1] = '<%=attr%>'
+  <% end %>
+<% end %>
+

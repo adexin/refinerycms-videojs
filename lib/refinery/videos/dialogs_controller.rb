@@ -1,11 +1,14 @@
-Refinery::Admin::DialogsController.class_eval do
-  Refinery::Admin::DialogsController::TYPES << 'video'
-  def find_iframe_src_with_video
+module DialogsControllerFindVideoIframeSrc
+  def find_iframe_src
     if @dialog_type == 'video'
       @iframe_src = refinery.insert_videos_admin_videos_path url_params.merge(:dialog => true)
     else
-      find_iframe_src_without_video
+      super
     end
   end
-  alias_method_chain :find_iframe_src, :video
+end
+
+Refinery::Admin::DialogsController.class_eval do
+  Refinery::Admin::DialogsController::TYPES << 'video'
+  prepend(DialogsControllerFindVideoIframeSrc)
 end
