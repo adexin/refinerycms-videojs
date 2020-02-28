@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = %q{refinerycms-videojs}
-  s.version           = %q{0.6.0.0}
+  s.version           = %q{0.6.1.0}
   s.summary           = %q{Videos extension for Refinery CMS}
   s.description       = %q{Manage videos in RefineryCMS using Video.js player for playback}
   s.email             = %q{admin@adexin.com}

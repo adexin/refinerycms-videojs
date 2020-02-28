@@ -15,8 +15,8 @@
         <div class='field'>
           <div class="use_file" <%= raw "style='display: none;'" if v.object.use_external %>>
             <% if v.object.file.present? %>
-                <% if v.object.url %>
-                    <%= link_to(t('.download_current'), v.object.url,
+                <% if v.object.remote_url %>
+                    <%= link_to(t('.download_current'), v.object.remote_url,
                                 :title => v.object.file_name) %>
                     <em><%= t('.or') %> </em><%= t('.replace') %>
                 <% else %>
