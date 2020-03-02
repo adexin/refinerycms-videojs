@@ -1,14 +1,9 @@
 Refinery::Core::Engine.routes.prepend do
-  match '/system/videos/*dragonfly', :to => Dragonfly.app(:refinery_videos), via: [:get, :post]
-
-  # Frontend routes
-  namespace :videos do
-    resources :videos, :path => '', :only => [:index, :show]
-  end
+  get '/system/videos/*dragonfly', to: Dragonfly.app(:refinery_videos)
 
   # Admin routes
-  namespace :videos, :path => '' do
-    namespace :admin, :path => 'refinery' do
+  namespace :videos, path: '' do
+    namespace :admin, path: 'refinery' do
       resources :videos do
         post :append_to_wym
         collection do
@@ -17,7 +12,7 @@ Refinery::Core::Engine.routes.prepend do
           get :dialog_preview
         end
       end
-      resources :video_files, :only => [:destroy]
+      resources :video_files, only: [:destroy]
     end
   end
 
