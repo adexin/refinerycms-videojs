@@ -1,0 +1,78 @@
+de:
+  wym_tools:
+    add_video: Video anlegen
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: Neues Video anlegen
+    plugins:
+      videos:
+        title: Videos
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Neues Video anlegen
+            reorder: Videos umsortieren
+            reorder_done: Fertig
+          records:
+            title: Videos
+            sorry_no_results: Leider konnten keine Videos gefunden werden.
+            no_items_yet: Es gibt noch keine Videos. Bitte mit "Neues Video anlegel" eins anlegen.
+          video:
+            view_live_html: Video anzeigen <br/><em>(in neuem Fenster)</em>
+            edit: Video gestalten
+            delete: Video löschen
+            file: Datei
+            link: Link
+            shared_source: Embedded
+          new:
+            use_files: Dateien verwenden
+            use_embedded_video: Embedded Video verwenden
+          form:
+            title: Titel
+            poster: Vorschaubild
+            width: Breite
+            height: Höhe
+          file_fields:
+            files: Dateien
+            file_tip: Am besten .mp4 oder .webm-Datene (oder) Links verwenden
+            use_file: Datei verwenden
+            use_external_source: Externes Video verwenden
+            add_file: Datei anlegen
+            add_source: Quelle anlegen
+            delete_source: Quelle löschen
+            link_to_source: Quelle verlinken
+            download_current: Dieses Video verwenden
+            or: Oder
+            replace: Mit diesem Video ersetzen
+            maximum_file_size: "Größenlimit: %{bytes}"
+          new_file_field:
+            use_file: Datei verwenden
+            use_external_source: Externe Quelle verwenden
+            add_file: Datei anlegen
+            add_source: Quelle anlegen
+            delete_source: Quelle löschen
+          embed_video_fields:
+            copy_embed_tag_here: HTML einfügen
+          form_option_fields:
+            options: Optionen
+            autoplay: Sofort abspielen
+            show_ontrols: Steuerelemente zeigen
+            preload_video: Videoinhalt bei Seitenabruf vorladen
+            loop_video: Nach Abschluss wieder anfangen
+          insert:
+            insert: Einfügen
+          preview_form:
+            width: Breite
+            height: Höhe
+      videos:
+        show:
+          other: Andere Videos
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: Dateiname
+        file_size: Dateigröße
+        file_ext: Dateiendung (z.B. .mp4, .webm)
