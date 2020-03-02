@@ -1,4 +1,6 @@
 ru:
+  wym_tools:
+    add_video: Добавить видео
   refinery:
     admin:
       dashboard:
