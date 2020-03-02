@@ -58,7 +58,7 @@ module Refinery
             :title, :poster_id, :position, :config, :embed_tag, :use_shared,
             *Video::CONFIG_OPTIONS.keys,
             :video_files_attributes => [
-              :file, :position, :use_external, :external_url
+              :id, :file, :position, :use_external, :external_url
             ])
         end
       end
