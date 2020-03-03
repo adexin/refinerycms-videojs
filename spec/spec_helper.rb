@@ -1,27 +1,21 @@
-require 'bundler/setup'
-Bundler.setup
 
-require 'simplecov'
-SimpleCov.start 'rails'
+# Configure Rails Environment
+ENV["RAILS_ENV"] ||= 'test'
+
+require File.expand_path("../dummy/config/environment.rb", __FILE__)
+require 'rspec/rails'
+require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
+require 'capybara/rails'
+require 'capybara-webkit'
+require 'factory_girl_rails'
+
 
 def refinery
   Refinery::Core::Engine.routes.url_helpers
 end
 
 def setup_environment
-  # Configure Rails Environment
-  ENV["RAILS_ENV"] ||= 'test'
-
-  require File.expand_path("../../config/environment", __FILE__)
-
-  require 'rspec/rails'
-  require 'capybara/rspec'
-  require 'capybara-screenshot/rspec'
-  require 'capybara/rails'
-  require 'capybara-webkit'
-  require 'factory_girl_rails'
-
-
   Rails.backtrace_cleaner.remove_silencers!
   Capybara::Screenshot.prune_strategy = :keep_last_run
   # Capybara::Webkit.configure do |config|

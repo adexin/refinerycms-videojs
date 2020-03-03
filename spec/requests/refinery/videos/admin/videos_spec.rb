@@ -60,7 +60,7 @@ module Refinery
           context "valid data for file with file" do
             it "should succeed" do
               fill_in "video_title", :with => "Test Video"
-              file = File.join(Rails.root, 'spec/support/fixtures/video.flv')
+              file = File.join(Rails.root, '../../spec/support/fixtures/video.flv')
               attach_file('video_video_files_attributes_0_file', file)
               click_button "Save"
               page.should have_content("'Test Video' was successfully added.")

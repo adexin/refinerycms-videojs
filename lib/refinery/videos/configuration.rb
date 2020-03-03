@@ -9,7 +9,7 @@ module Refinery
                     :datastore_root_path, :trust_file_extensions, :whitelisted_mime_types, :skin_css_class
 
     self.dragonfly_insert_before = 'ActionDispatch::Callbacks'
-    self.dragonfly_secret = Refinery::Dragonfly.secret
+    self.dragonfly_secret = Refinery::Dragonfly.secret if defined? Refinery::Dragonfly
     self.dragonfly_server_root = 'public'
     self.trust_file_extensions = false
     self.max_file_size = 524288000
