@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib}/**/*"]
 
-  s.add_dependency 'dragonfly', '~> 1.2.0'
+  s.add_dependency 'dragonfly', '>= 1.2', '< 1.5'
   s.add_dependency 'refinerycms-core', '~> 4.0.2'
   s.add_dependency 'refinerycms-acts-as-indexed', ['~> 3.0', '>= 3.0.0']
   s.add_dependency 'refinerycms-wymeditor', ['~> 2.0', '>= 2.0.0']
